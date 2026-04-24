@@ -1,0 +1,43 @@
+---
+---
+<section class="hero">
+  <p class="label">Software Engineer · Musician</p>
+  <h1>I build things that <em>think</em><br />and things that <em>sing.</em></h1>
+  <p class="bio">
+    Engineer by training, musician by passion — I write software that solves real problems
+    and music that asks interesting questions.
+  </p>
+</section>
+
+<style>
+.hero {
+  padding: 4.5rem 2rem 3.5rem;
+  border-bottom: 1px solid var(--border);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.label {
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem;
+}
+h1 {
+  font-size: clamp(1.875rem, 5vw, 2.75rem);
+  color: var(--text);
+  margin: 0 0 1.25rem;
+}
+h1 em { font-style: italic; }
+.bio {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 500px;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 3rem 1.25rem 2.5rem; }
+}
+</style>

@@ -1,0 +1,98 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+
+interface Props {
+  projects: CollectionEntry<'projects'>[];
+}
+
+const { projects } = Astro.props;
+---
+<section id="projects" class="projects-section">
+  <p class="label">Projects</p>
+  <div class="filters" role="group" aria-label="Filter projects by category">
+    <button class="filter active" data-filter="All">All</button>
+    <button class="filter" data-filter="Software">Software</button>
+    <button class="filter" data-filter="Music">Music</button>
+    <button class="filter" data-filter="Fun">Fun</button>
+  </div>
+  <div class="grid">
+    {projects.map(p => (
+      <ProjectCard
+        id={p.id}
+        title={p.data.title}
+        category={p.data.category}
+        tagline={p.data.tagline}
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+.projects-section {
+  padding: 3.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.label {
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem;
+}
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+.filter {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.3rem 0.875rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.filter.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.filter:hover:not(.active) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .projects-section { padding: 2.5rem 1.25rem; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+const filters = document.querySelectorAll<HTMLButtonElement>('.filter');
+const cards = document.querySelectorAll<HTMLElement>('.card');
+
+filters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const selected = btn.dataset.filter;
+    cards.forEach(card => {
+      const show = selected === 'All' || card.dataset.category === selected;
+      card.style.display = show ? '' : 'none';
+    });
+  });
+});
+</script>

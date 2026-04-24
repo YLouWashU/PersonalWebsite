@@ -1,0 +1,53 @@
+---
+---
+<section id="about" class="about">
+  <img src="/images/photo.svg" alt="Yang Lou" class="photo" />
+  <div class="content">
+    <p class="label">About</p>
+    <p>
+      I'm a software engineer and classical musician.
+      By day I build software that solves real problems;
+      by night I work with music that asks interesting questions.
+      I'm drawn to projects where precision and creativity overlap —
+      whether that's a well-architected system or a well-voiced chord.
+    </p>
+  </div>
+</section>
+
+<style>
+.about {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 3.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+}
+.content { flex: 1; }
+.label {
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 0.875rem;
+}
+.content p:last-child {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 560px) {
+  .about { flex-direction: column; padding: 2.5rem 1.25rem; }
+}
+</style>

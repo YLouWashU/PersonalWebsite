@@ -1,0 +1,61 @@
+---
+const EMAIL = 'ilyesse08@gmail.com';
+const LINKEDIN = 'https://linkedin.com/in/yang-lou';
+---
+<section id="contact" class="contact">
+  <p class="label">Contact</p>
+  <p class="invite">Want to talk code, music, or anything in between? Reach out.</p>
+  <div class="actions">
+    <a href={`mailto:${EMAIL}`} class="btn-primary">Email me</a>
+    <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" class="btn-outline">LinkedIn</a>
+  </div>
+</section>
+
+<style>
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.label {
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 0.875rem;
+}
+.invite {
+  color: var(--text);
+  margin: 0 0 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.actions {
+  display: flex;
+  gap: 0.875rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 0.625rem 1.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.88; }
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--muted);
+  padding: 0.625rem 1.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.15s;
+}
+.btn-outline:hover { color: var(--accent); }
+</style>

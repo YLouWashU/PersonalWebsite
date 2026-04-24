@@ -1,0 +1,37 @@
+:root {
+  --bg: #f7f3ee;
+  --text: #1a2218;
+  --accent: #7a9c7e;
+  --muted: #5a6e5c;
+  --card-bg: #ffffff;
+  --border: #ddd6c8;
+  --warm: #c8945a;
+  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+p { margin: 0 0 1rem; }
+a { color: var(--accent); }
+img { max-width: 100%; display: block; }
+code, pre { font-family: var(--font-mono); }

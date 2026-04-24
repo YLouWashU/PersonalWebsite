@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+<BaseLayout title={`${title} — Yang Lou`} description={description}>
+  <header class="project-nav">
+    <a href="/" class="back">← Yang Lou</a>
+    <span class="site-name">Yang Lou</span>
+  </header>
+  <main class="project-main">
+    <slot />
+  </main>
+</BaseLayout>
+
+<style>
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 2rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+.back {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.15s;
+}
+.back:hover { color: var(--accent); }
+.site-name {
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.project-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+@media (max-width: 480px) {
+  .project-nav { padding: 0.875rem 1.25rem; }
+  .project-main { padding: 0 1.25rem 4rem; }
+}
+</style>
