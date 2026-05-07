@@ -1,6 +1,7 @@
 ---
 title: "ATEK"
 category: Work
+year: 100
 tagline: "Aria Training & Evaluation Kit — the official ML toolbox for egocentric vision datasets."
 githubUrl: https://github.com/facebookresearch/ATEK
 ---
