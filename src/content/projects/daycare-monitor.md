@@ -1,6 +1,6 @@
 ---
 title: "Daycare Monitor"
-category: Software
+category: Work
 tagline: "Motion-triggered video analysis with Google Gemini's advanced VLM capabilities."
 ---
 

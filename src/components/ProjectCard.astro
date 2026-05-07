@@ -2,14 +2,14 @@
 interface Props {
   id: string;
   title: string;
-  category: 'Software' | 'Music' | 'Fun';
+  category: 'Work' | 'Music' | 'Fun';
   tagline: string;
 }
 
 const { id, title, category, tagline } = Astro.props;
 
 const categoryColor = {
-  Software: 'var(--muted)',
+  Work: 'var(--muted)',
   Music: 'var(--accent)',
   Fun: 'var(--warm)',
 }[category];

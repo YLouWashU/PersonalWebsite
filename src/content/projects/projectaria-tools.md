@@ -1,6 +1,6 @@
 ---
 title: "Project Aria Tools"
-category: Software
+category: Work
 tagline: "Open-source data and ML libraries powering the Project Aria researcher ecosystem."
 githubUrl: https://github.com/facebookresearch/projectaria_tools
 liveUrl: https://projectaria.com

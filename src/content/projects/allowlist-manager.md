@@ -1,6 +1,6 @@
 ---
 title: "Allowlist Manager"
-category: Fun
+category: Work
 tagline: "A Claude Code skill that tames permission prompts."
 githubUrl: https://github.com/YLouWashU/allowlist-manager
 ---

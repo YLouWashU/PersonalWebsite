@@ -1,6 +1,6 @@
 ---
 title: "Overnight Agent"
-category: Fun
+category: Work
 tagline: "A Claude Code skill for working past the usage limit."
 githubUrl: https://github.com/YLouWashU/overnight-agent
 ---
