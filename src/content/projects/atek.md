@@ -12,7 +12,3 @@ ATEK (Aria Training & Evaluation Kit) accelerates ML development on Project Aria
 ## What I did
 
 Built as part of Meta Reality Labs Research to reduce the friction between raw Aria data and model training. ATEK handles the preprocessing pipeline so researchers can focus on the models, not the data plumbing.
-
-## Tech stack
-
-Python · PyTorch · WebDataset · VRS format · 3D object detection · surface reconstruction

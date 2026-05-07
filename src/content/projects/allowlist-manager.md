@@ -15,7 +15,3 @@ A Claude Code skill that automates permission management. Instead of approving t
 - Virtual environment wildcard expansion for Python projects
 - Retroactive init mode to capture patterns from existing transcripts
 - Risky commands queued for manual review rather than silently blocked
-
-## Tech stack
-
-Python · shell scripting · Claude Code hooks · JSON settings management

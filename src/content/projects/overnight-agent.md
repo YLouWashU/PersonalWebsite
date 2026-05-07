@@ -12,7 +12,3 @@ A Claude Code skill that handles the usage limit gracefully. Instead of losing c
 ## How it works
 
 Three modes: **pause** captures context and schedules the resume cron job; **resume** awakens and reconstructs the session; **recap** shows current status. Session data is stored locally; no external services required.
-
-## Tech stack
-
-Claude Code CLI · system crontab · bash · session state management

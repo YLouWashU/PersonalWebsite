@@ -13,7 +13,3 @@ Project Aria Tools is the official open-source toolkit for working with data fro
 ## What I did
 
 As Tech Lead for Data & ML Libraries at Meta Reality Labs Research, I led the development of the open-source libraries supporting the researcher ecosystem. The toolkit underpins a wide range of academic and industry research into egocentric AI.
-
-## Tech stack
-
-C++ · Python · CMake · SLAM · sensor calibration · computer vision

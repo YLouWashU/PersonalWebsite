@@ -12,7 +12,3 @@ A personal catalog of classical music recordings built from Gramophone magazine 
 ## How it works
 
 The pipeline runs in four stages: extract (scrape Gramophone via Zinio), process (generate English/Chinese TLDRs via Claude), enrich (match recordings to Spotify), publish (generate static HTML via Jinja2 templates). The result is annotated recording comparison cards with performer and label details.
-
-## Tech stack
-
-Python · litellm · Claude · Spotify API · Jinja2 · Pydantic · GitHub Pages
