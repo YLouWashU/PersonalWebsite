@@ -2,13 +2,13 @@
 title: "Sheet Music That Listens Back"
 shortName: Lipu
 category: Music
-tagline: "Upload a PDF score, get harmonic analysis. Classical music meets modern tooling."
+tagline: "Harmonic analysis for classical scores. Point it at a MusicXML file, get Roman numeral annotations back."
 liveUrl: https://yang-lou.com/projects/lipu/
 ---
 
 ## What it is
 
-Lipu is a web-based harmonic analysis tool for classical music scores. Upload a PDF or MusicXML file and it extracts harmonic progressions, identifies key areas, and annotates the score with Roman numeral analysis.
+Lipu is a web-based harmonic analysis tool for classical music scores. Point it at a pre-downloaded MusicXML file and it extracts harmonic progressions, identifies key areas, and annotates the score with Roman numeral analysis.
 
 ## Why I built it
 
@@ -20,4 +20,4 @@ The backend parses the score using music21 (Python), extracts note events per me
 
 ## Tech stack
 
-Python · music21 · Flask · JavaScript · PDF.js
+Python · music21 · Flask · JavaScript
