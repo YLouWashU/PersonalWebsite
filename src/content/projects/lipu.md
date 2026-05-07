@@ -2,7 +2,6 @@
 title: "Sheet Music That Listens Back"
 shortName: Lipu
 category: Music
-year: 2024
 tagline: "Upload a PDF score, get harmonic analysis. Classical music meets modern tooling."
 liveUrl: https://yang-lou.com/projects/lipu/
 ---

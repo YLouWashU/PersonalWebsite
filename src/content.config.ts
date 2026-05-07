@@ -7,7 +7,7 @@ const projects = defineCollection({
     title: z.string(),
     shortName: z.string().optional(),
     category: z.enum(['Software', 'Music', 'Fun']),
-    year: z.number(),
+    year: z.number().optional(),
     tagline: z.string(),
     liveUrl: z.string().url().optional(),
     githubUrl: z.string().url().optional(),

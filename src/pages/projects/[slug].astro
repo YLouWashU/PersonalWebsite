@@ -14,7 +14,7 @@ const { project } = Astro.props;
 const { Content } = await render(project);
 
 const allProjects = await getCollection('projects');
-const sorted = allProjects.sort((a, b) => b.data.year - a.data.year);
+const sorted = allProjects.sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
 const idx = sorted.findIndex(p => p.id === project.id);
 const prev = sorted[idx + 1] ?? null;
 const next = sorted[idx - 1] ?? null;
@@ -30,7 +30,7 @@ const buttonLabel = project.data.shortName ?? 'Open project';
 <ProjectLayout title={project.data.title} description={project.data.tagline}>
   <div class="project-header">
     <span class="meta" style={`color: ${categoryColor}`}>
-      {project.data.category} · {project.data.year}
+      {project.data.category}
     </span>
     <h1>{project.data.title}</h1>
     <p class="tagline">{project.data.tagline}</p>
